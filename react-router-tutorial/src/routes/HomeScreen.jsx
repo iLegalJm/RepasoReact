@@ -1,5 +1,10 @@
+import { useContext } from "react"
+import { UsuarioContext } from "./context/usuarioContext"
 
 export const HomeScreen = () => {
+
+    const { usuario } = useContext(UsuarioContext);
+
     return (
         <>
             <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -7,88 +12,32 @@ export const HomeScreen = () => {
                     <thead className="text-xs text-gray-700 uppercase :text-gray-400">
                         <tr>
                             <th scope="col" className="px-6 py-3 bg-gray-50 :bg-gray-800">
-                                Product name
+                                Nombre
                             </th>
                             <th scope="col" className="px-6 py-3">
-                                Color
+                                Tecnología
                             </th>
                             <th scope="col" className="px-6 py-3 bg-gray-50 :bg-gray-800">
-                                Category
+                                Email
                             </th>
                             <th scope="col" className="px-6 py-3">
-                                Price
+                                Redes
                             </th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr className="border-b border-gray-200 :border-gray-700">
                             <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 :text-white :bg-gray-800">
-                                Apple MacBook Pro 17
+                                {usuario.nombre}
                             </th>
                             <td className="px-6 py-4">
-                                Silver
+                                {usuario.tecnologia}
                             </td>
                             <td className="px-6 py-4 bg-gray-50 :bg-gray-800">
-                                Laptop
+                                {usuario.email}
                             </td>
                             <td className="px-6 py-4">
-                                $2999
-                            </td>
-                        </tr>
-                        <tr className="border-b border-gray-200 :border-gray-700">
-                            <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 :text-white :bg-gray-800">
-                                Microsoft Surface Pro
-                            </th>
-                            <td className="px-6 py-4">
-                                White
-                            </td>
-                            <td className="px-6 py-4 bg-gray-50 :bg-gray-800">
-                                Laptop PC
-                            </td>
-                            <td className="px-6 py-4">
-                                $1999
-                            </td>
-                        </tr>
-                        <tr className="border-b border-gray-200 :border-gray-700">
-                            <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 :text-white :bg-gray-800">
-                                Magic Mouse 2
-                            </th>
-                            <td className="px-6 py-4">
-                                Black
-                            </td>
-                            <td className="px-6 py-4 bg-gray-50 :bg-gray-800">
-                                Accessories
-                            </td>
-                            <td className="px-6 py-4">
-                                $99
-                            </td>
-                        </tr>
-                        <tr className="border-b border-gray-200 :border-gray-700">
-                            <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 :text-white :bg-gray-800">
-                                Google Pixel Phone
-                            </th>
-                            <td className="px-6 py-4">
-                                Gray
-                            </td>
-                            <td className="px-6 py-4 bg-gray-50 :bg-gray-800">
-                                Phone
-                            </td>
-                            <td className="px-6 py-4">
-                                $799
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 :text-white :bg-gray-800">
-                                Apple Watch 5
-                            </th>
-                            <td className="px-6 py-4">
-                                Red
-                            </td>
-                            <td className="px-6 py-4 bg-gray-50 :bg-gray-800">
-                                Wearables
-                            </td>
-                            <td className="px-6 py-4">
-                                $999
+                                {usuario.redes}
                             </td>
                         </tr>
                     </tbody>
